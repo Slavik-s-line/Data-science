@@ -9,3 +9,6 @@ def hypot_2():  # знаходимо країну з найб к-тью успі
     country = df[df["status"] == "acquired"]["country_code"].value_counts().index[0]
     print(f"Гіпотеза 2:\nНайбільше успішних стартапів в Китаї\n"
           f"ВИСНОВОК: Ні. Найбільше успішних стартапів в {country}\n")
+    
+    df[df["status"] == "acquired"]["country_code"].value_counts().head(5).plot(kind='pie')  # створення кругової діаграми
+    plt.show()
