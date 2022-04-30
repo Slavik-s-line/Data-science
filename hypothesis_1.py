@@ -47,9 +47,7 @@ def hypot_1():
           f"ВИСНОВОК: так, це правда\n"
           f"Стартапи з фінансуванням більше 100,000$ стають успішними з умовірністю: {chance_more_100k_succes}\n"
           f"Стартапи з фінансуванням менше 100,000$ стають успішними з умовірністю: {chance_less_100k_succes}\n")
-    
     s = pd.Series(data=[chance_more_100k_succes, chance_less_100k_succes],
                   index=[">100,000$", "<100,000$"])
-    s.plot(kind = 'barh')  # створення стовпчатої діаграми
+    s.plot(kind = 'barh')
     plt.show()
-
