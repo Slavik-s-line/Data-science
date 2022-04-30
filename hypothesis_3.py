@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 df = pd.read_csv("investments_VC.csv")  # створюємо DataFrame на основі файлу з даними
 
@@ -10,6 +11,7 @@ def hypot_3():  # знаходимо категорії найуспішніши
     print(f"Гіпотеза 3:\nНайбільше успішних стартапів пов'язано зі спортом\n"
           f"ВИСНОВОК: Ні.\n"
           f"Найбільше успішних стартапів в категоріях {category[0]}, {category[1]}, {category[2]}\n")
-    
-    df[df["status"] == "acquired"]["market"].value_counts().head(3).plot(kind = 'pie')  # створення кругової діаграми
+
+    df[df["status"] == "acquired"]["market"].value_counts().head(3).plot(kind='pie')  # створення кругової діаграми
     plt.show()
+
